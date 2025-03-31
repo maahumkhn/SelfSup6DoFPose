@@ -14,11 +14,6 @@ In future work, I plan on testing more combinations of hyperparameters for train
 
 ## Files and Folders Information
 The repository contains the following files and folders:
-- LINEMOD/data/05 — Folder containing LINEMOD data for object 5, the can.
-  - LINEMOD/data/05/bb_rgb — Output of preprocessing.py file, contains 224x224 bounding-box centered images of the can
-  - LINEMOD/data/05/cropped — Output of the previously written preprocessing.py (code not in repository, I overwrote it) that contains the resized 224x224 bounding boxes of the object
-  - LINEMOD/data/05/rgb — The full RGB images
-  - LINEMOD/data/05/mask — Masks of the object, used in preprocessing.py to obtain bounding boxes
 - results/models — Contains the model paths I created at the time of this upload (March 31, 2025)
 - results/loss — Contains loss plots I had created thus far at the time of this upload
 - commands.txt — Contains default commands to type into Terminal to run the preprocessing.py, train_ss.py, train_pose.py, and test.py files
@@ -30,3 +25,6 @@ The repository contains the following files and folders:
 - test.py — Test file. NOTE: FILE IS INCOMPLETE AND NOT CURRENTLY RUNNING. CALCULATIONS IN THIS HAVE NOT YET BEEN FIXED, AND MAY BE INCORRECT.
 - train_pose.py — Training only the pose regression layers. NOTE: CALCULATIONS IN THIS HAVE NOT YET BEEN FIXED, AND MAY BE INCORRECT.
 - train_ss.py — Training the self-supervised model only.
+
+## Dataset
+The dataset this code used and was based on is LINEMOD, originally obtained from [The DenseFusion GitHub (linked)](https://github.com/j96w/DenseFusion/tree/master?tab=readme-ov-file#datasets) by downloading their [LINEMOD dataset](https://drive.google.com/drive/folders/19ivHpaKm9dOrr12fzC8IDFczWRPFxho7) from Google Drive.
