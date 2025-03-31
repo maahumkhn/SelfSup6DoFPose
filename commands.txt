@@ -1,0 +1,26 @@
+Commands to Run Files
+By: Maahum Khan
+
+The pre-processing, train, and test files allow users to enter many arguments for easier, more modular use.
+Below, the outlines of the commands to type in your Terminal to run the files is provided for efficiency.
+Helpful descriptions of each argument are provided in train.py with the argparse calls.
+Note that the values here are the defaults. Feel free to alter the arguments as you'd like!
+
+
+PRE-PROCESSING FILE:
+python preprocessing.py --rgb_dir LINEMOD/data/05/rgb --mask_dir LINEMOD/data/05/masks --output_dir LINEMOD/data/05/bb_rgb
+
+TRAIN_SS FILE:
+- All Arguments Included:
+python train_ss.py --data_dir LINEMOD/data/05/cropped --list_dir LINEMOD/data/05/train.txt --loss_plot results/loss_plots/ss_20.png --pth results/models/ss_20.pth --embed_dim 64 --e 12 --b 64 --lr 0.0005
+- Only Hyperparameters:
+python train_ss.py --embed_dim 128 --e 10 --b 64 --lr 0.0001
+
+TRAIN_POSE FILE:
+- All arguments Included:
+python train_pose.py --data_dir LINEMOD/data/05/cropped --gt_dir LINEMOD/data/05/gt.yml --list_dir LINEMOD/data/05/train.txt --loss_plot results/loss_plots/p_crop_1.png --embed_dim 64 --hid_dim 128 --e 10 --b 64 --lr 0.0001 --ss_pth results/models/ss_10.pth --p_pth results/models/p_1.pth
+- Only hyperparameters:
+python train_pose.py --embed_dim 64 --hid_dim 128 --e 10 --b 64 --lr 0.0001
+
+TEST FILE:
+python test.py --data_dir LINEMOD/data/05/bb_rgb --gt_dir LINEMOD/data/05/gt.yml --list_dir LINEMOD/data/05/test.txt --model_dir LINEMOD/data/05/models/obj_05.ply --ss_pth results/models/ss_19.pth --p_pth results/models/p_1.pth
