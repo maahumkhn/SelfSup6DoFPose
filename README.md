@@ -14,14 +14,13 @@ In future work, I plan on testing more combinations of hyperparameters for train
 
 ## Files and Folders Information
 The repository contains the following files and folders:
-- results/models — Contains the model paths I created at the time of this upload (March 31, 2025)
-- results/loss — Contains loss plots I had created thus far at the time of this upload
 - commands.txt — Contains default commands to type into Terminal to run the preprocessing.py, train_ss.py, train_pose.py, and test.py files
 - dataloader_pose.py — Data loader for the full model (self-supervised layers + pose regression layers)
 - dataloader_ss.py — Data loader for training only the self-supervised layers
 - imglist_generator.py — File I used to create txt files with sorted lists of randomly selected images for training/tests, containing however many elements you choose
 - model.py — Code for both the self-supervised model and the full pose regression model. Can be altered to include more layers, or change the self-supervised backbone
 - preprocessing.py — Current version converts the full RGB images into bounding box centered 224x224 images. Function "resize_img" can be called instead to get resized 224x224 bounding box images.
+- ss_21.pth – Self-supervised model path, trained on: cropped images (resized bounding box images), 15% of dataset used for training, 15 epochs, batch size 54, embedding dimension 64, learning rate 0.0005
 - test.py — Test file. NOTE: FILE IS INCOMPLETE AND NOT CURRENTLY RUNNING. CALCULATIONS IN THIS HAVE NOT YET BEEN FIXED, AND MAY BE INCORRECT.
 - train_pose.py — Training only the pose regression layers. NOTE: CALCULATIONS IN THIS HAVE NOT YET BEEN FIXED, AND MAY BE INCORRECT.
 - train_ss.py — Training the self-supervised model only.
