@@ -72,6 +72,22 @@ def preprocess_img(img_path, mask_path):
 
     return cropped_img
 
+
+# Function that resizes image by stretching bounding box out into 224x224 image
+def resize_img(img_path, mask_path):
+    # Get bounding box and its center
+    x, y, w, h = get_bounding_box(mask_path)
+
+    # Check if object is even in the mask
+    if x is None:
+        raise ValueError("Pre-Processing: No object found in the mask")
+    image = cv2.imread(img_path)
+    cropped_img = image[y:y+h, x:x+w]
+    resized_img = cv2.resize(cropped_img, (224, 224), interpolation=cv2.INTER_LINEAR)
+
+    return resized_img
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--rgb_dir", type=str, default="LINEMOD/data/05/rgb")
