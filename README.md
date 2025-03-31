@@ -27,3 +27,10 @@ The repository contains the following files and folders:
 
 ## Dataset
 The dataset this code used and was based on is LINEMOD, originally obtained from [The DenseFusion GitHub (linked)](https://github.com/j96w/DenseFusion/tree/master?tab=readme-ov-file#datasets) by downloading their [LINEMOD dataset](https://drive.google.com/drive/folders/19ivHpaKm9dOrr12fzC8IDFczWRPFxho7) from Google Drive.
+
+## Notes
+Notes to keep in mind when using or looking at this project:
+- Since my results (i.e. loss graphs and model .pth files) could not be uploaded due to large file size, please feel free to train your own model using commands provided in commands.txt (alter depending on your dataset and directory structures)
+- Current code uploads and uses trained model weights/path from a directory in the project called "results/models/". Please alter the code according to your needs.
+- Rotation loss, ADD metric, and rotational matrix to quaternion conversion calculations need to be double checked and likely need correction
+- Current model results (as shown in progress presentation) are not good, future work still needs to be implemented
