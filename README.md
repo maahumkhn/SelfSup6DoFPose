@@ -14,12 +14,12 @@ In future work, I plan on testing more combinations of hyperparameters for train
 
 ## Files and Folders Information
 The repository contains the following files and folders:
+- Maahum Khan - ELEC 874 Project Presentation — Presentation slides, describes project and progress so far
 - commands.txt — Contains default commands to type into Terminal to run the preprocessing.py, train_ss.py, train_pose.py, and test.py files
 - dataloader_pose.py — Data loader for the full model (self-supervised layers + pose regression layers)
 - dataloader_ss.py — Data loader for training only the self-supervised layers
 - imglist_generator.py — File I used to create txt files with sorted lists of randomly selected images for training/tests, containing however many elements you choose
 - model.py — Code for both the self-supervised model and the full pose regression model. Can be altered to include more layers, or change the self-supervised backbone
-- Maahum Khan - ELEC 874 Project Presentation — Presentation slides, describes project and results so far
 - preprocessing.py — Current version converts the full RGB images into bounding box centered 224x224 images. Function "resize_img" can be called instead to get resized 224x224 bounding box images.
 - test.py — Test file. NOTE: FILE IS INCOMPLETE AND NOT CURRENTLY RUNNING. CALCULATIONS IN THIS HAVE NOT YET BEEN FIXED, AND MAY BE INCORRECT.
 - train_pose.py — Training only the pose regression layers. NOTE: CALCULATIONS IN THIS HAVE NOT YET BEEN FIXED, AND MAY BE INCORRECT.
